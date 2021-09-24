@@ -7,7 +7,10 @@
     <div class="table table-striped">
         <h2 class="title-show">{{$article->title}}</h2>
         <p class="abstract-show">{{$article->abstract}}</p>
-        <h4 class="author-show">{{$article->author}}</h4>
+        <h4 class="author-show">{{$article->author->name}}</h4>
+        @if(Auth::check())
+            <a href="{{ route('articles.edit', $article) }}">ADD</a>
+        @endif
     </div>
 </div>
 @endsection

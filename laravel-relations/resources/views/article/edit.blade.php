@@ -11,9 +11,10 @@
             </ul>
         </div>
     @endif
-    <h1>Crea nuovo Articolo:</h1>
-    <form action="{{ route('articles.store') }}" method="POST">
+    <h1>Aggiungi:</h1>
+    <form action="{{ route('articles.update', $article) }}" method="POST">
         @csrf
+        @method('PUT')
             <div>
                 <label for="title">Title:</label>
                 <input class="form-control" type="text" name="title" id="title">

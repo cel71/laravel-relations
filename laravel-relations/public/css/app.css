@@ -12332,3 +12332,9 @@ a.text-dark:focus {
   }
 }
 
+body .link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
